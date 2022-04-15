@@ -7,5 +7,6 @@ export type ImgMarkerProps = {
     scale: {
         width: number,
         height: number
-    }
+    },
+    mapZoom: number
 }
