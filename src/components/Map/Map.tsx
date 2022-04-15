@@ -10,14 +10,20 @@ export const Map = () => {
     }
   )
   const center = {
-    lat: -22.120347,
-    lng: -51.407094
+    lat: -22.920347,
+    lng: -51.907094
   }
   const mapStyle = {
     height: '100%', 
     width: '100%'
   }
   const zoom = 15
+
+  const markerURL = 'https://www.brasilchannel.com.br/img/mapas_municipios/sp/sp_pprudente.gif'
+  const markerScale = {
+    width: 519,
+    height: 384
+  }
   
   return (
     <div className="map">
@@ -25,10 +31,7 @@ export const Map = () => {
         isLoaded
         ? (
             <GoogleMap mapContainerStyle={mapStyle} center={center} zoom={zoom}>
-              <Marker position={center} icon={{
-                  url: 'https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg',
-                  scaledSize: new google.maps.Size(154, 88.25)
-                }}  />
+              <ImgMarker center={center} url={markerURL} scale={markerScale} />
             </GoogleMap>
           )
         : <></>

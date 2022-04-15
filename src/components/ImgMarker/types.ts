@@ -1,6 +1,11 @@
 export type ImgMarkerProps = {
-    lat: number,
-    lng: number,
-    title: string,
-    color: string
+    center: {
+        lat: number, 
+        lng: number
+    }, 
+    url: string, 
+    scale: {
+        width: number,
+        height: number
+    }
 }
